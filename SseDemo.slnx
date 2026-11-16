@@ -1,0 +1,4 @@
+<Solution>
+  <Project Path="SseClient/SseClient.csproj" />
+  <Project Path="SseServer/SseServer.csproj" />
+</Solution>

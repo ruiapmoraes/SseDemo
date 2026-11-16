@@ -1,0 +1,18 @@
+﻿<!DOCTYPE html>
+<html lang="pt-BR">
+<body>
+    <h3>Eventos Recebidos:</h3>
+    <ul id="lista"></ul>
+
+    <script>
+        const lista = document.getElementById('lista');
+        const eventSource = new EventSource('/sse');
+
+        eventSource.addEventListener('notificacao', (e) => {
+            const li = document.createElement('li');
+            li.textContent = `[ID: ${e.lastEventId}] ${e.data}`;
+            lista.appendChild(li);
+        });
+    </script>
+</body>
+</html>
